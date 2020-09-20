@@ -1,0 +1,8 @@
+REGISTRY="test"
+PACKAGE_NAME="nginx-basic-auth"
+DOCKER_IMAGE="${REGISTRY}/${PACKAGE_NAME}"
+VERSION="1.0.0"
+
+display_status() {
+  echo ">>> $1 <<<" 1>&2
+}

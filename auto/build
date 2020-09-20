@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+cd $(dirname $0)/..
+source ./auto/set-env
+
+docker build --build-arg app_version=${VERSION} -t ${DOCKER_IMAGE} .
+docker tag ${DOCKER_IMAGE} ${DOCKER_IMAGE}:${VERSION}
